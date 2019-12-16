@@ -55,8 +55,7 @@ body {
     padding: 20px 30px;
     border-radius: 20px;
     margin-top: 20px;
-
-    max-height: 86px;
+    max-height: 110px;
     overflow: hidden;
 
     transition: max-height 0.4s ease-in;
@@ -73,7 +72,9 @@ body {
 .website-card-header {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     cursor: pointer;
+    align-items: center;
 }
 
 .website-card.open .website-card-header {
@@ -88,22 +89,22 @@ body {
     p {
         margin: 0;
         color: #B2B2B2;
+        font-size: 0.7rem;
     }
 
     span {
         color: $dark-grey;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
 }
 
 span.status {
-    padding: 5px 30px;
+    padding: 0 20px;
     background: #eee;
     font-weight: 500;
     border-radius: 25px;
     color: #fff;
     margin-left: 15px;
-
 }
 
 span.status-ok {
@@ -161,13 +162,8 @@ p.status-label {
     }
 }
 
-.website-card .col-md-6:first-child {
-    border-right: 1px solid #eee;
-}
 
-.website-card .col-md-6:nth-child(2) {
-    padding-left: 50px;
-}
+
 
 .website-card .row {
     padding: 20px 0;
@@ -297,10 +293,6 @@ p.status-label {
 }
 
 
-
-
-
-
 .checkbox-text {
     margin-left: 35px;
     display: block;
@@ -308,4 +300,46 @@ p.status-label {
 
 input:checked ~ .checkbox-text {
     text-decoration: line-through;
+}
+
+@media (min-width: 427px) {
+    
+.website-info {
+    p {
+        font-size: 1rem;
+    }
+
+    span {
+        font-size: 1.2rem;
+    }
+}
+
+}
+
+@media(min-width: 768px) {
+    .website-card {
+        max-height: 86px;
+    }
+    
+    .website-card-header {
+        flex-direction: row;
+    }
+
+    span.status {
+        padding: 5px 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .website-card .col-lg-6:first-child {
+        border-right: 1px solid #eee;
+    }
+
+    .website-card .col-lg-6:nth-child(2) {
+        padding-left: 50px;
+    }
+
+    .notes {
+        width: 80%;
+    }
 }
