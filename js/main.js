@@ -5,7 +5,7 @@ websiteCardHeaders.forEach(header => header.addEventListener("click", (e) => {
     let websiteCard = header.closest(".website-card");
 
     if(websiteCard.offsetHeight <= 140) {
-        websiteCard.style.maxHeight = "1000px";
+        websiteCard.style.maxHeight = "3000px";
     } else if(window.innerWidth <= 768) {
         websiteCard.style.maxHeight = "140px";
     } else {
