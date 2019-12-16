@@ -49,7 +49,7 @@ window.addEventListener("resize", () => {
         links.forEach(link => link.innerText = link.innerText.substring(0,25) + "...");
     }
     
-    if(window.innerWidth < 330) {
+    if(window.innerWidth < 370) {
         links.forEach(link => link.innerText = link.innerText.substring(0,20) + "...");
     }
     
