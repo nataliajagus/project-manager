@@ -7,16 +7,29 @@ body {
 }
 
 .category-button {
-  padding: 10px 15px;
-  background: #fff;
-  border: 1px solid #DEDEDE;
-  border-radius: 20px;
-  color: #3e3e3e;
   margin: 5px 0;
   -webkit-transition: background 0.5s ease-in;
   transition: background 0.5s ease-in;
   z-index: 1;
   position: relative;
+}
+
+.search button,
+.search input,
+.category-button {
+  padding: 10px 15px;
+  background: #fff;
+  border: 1px solid #DEDEDE;
+  border-radius: 20px;
+  color: #3e3e3e;
+}
+
+.search button {
+  font-weight: 500;
+}
+
+.search {
+  margin-bottom: 50px;
 }
 
 .category-button::before {
@@ -35,7 +48,8 @@ body {
   color: #fff;
 }
 
-.category-button.active {
+.category-button.active,
+.search button {
   background: linear-gradient(135deg, #4e95ff 0%, #5c70f2 49%, #5c70f2 54%, #655beb 71%, #655beb 100%);
   color: #fff;
 }
@@ -125,6 +139,18 @@ span.status-ok {
   background: #7EDF7E;
 }
 
+span.status-changes {
+  background: #FAA154;
+}
+
+span.status-todo {
+  background: #5486FA;
+}
+
+span.status-old {
+  background: #3e3e3e;
+}
+
 p.status-label {
   margin-top: 3px;
   margin-left: 15px;
@@ -174,6 +200,10 @@ p.status-label {
 .repo-links i {
   margin-right: 15px;
   font-size: 1.2rem;
+}
+
+.websites .container {
+  margin-bottom: 50px;
 }
 
 .website-card .row {
