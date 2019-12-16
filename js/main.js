@@ -32,7 +32,7 @@ if(window.innerWidth < 600) {
 }
 
 if(window.innerWidth < 420) {
-    links.forEach(link => link.innerText = link.innerText.substring(0,30) + "...");
+    links.forEach(link => link.innerText = link.innerText.substring(0,25) + "...");
 }
 
 if(window.innerWidth < 330) {
@@ -46,7 +46,7 @@ window.addEventListener("resize", () => {
     }
 
     if(window.innerWidth < 420) {
-        links.forEach(link => link.innerText = link.innerText.substring(0,30) + "...");
+        links.forEach(link => link.innerText = link.innerText.substring(0,25) + "...");
     }
     
     if(window.innerWidth < 330) {
