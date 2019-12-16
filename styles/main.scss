@@ -31,9 +31,21 @@ body {
     font-weight: 500;
 }
 
+.search input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
 
 .search {
     margin-bottom: 50px;
+}
+
+.search .container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .category-button::before {
@@ -71,7 +83,7 @@ body {
     padding: 20px 30px;
     border-radius: 20px;
     margin-top: 20px;
-    max-height: 110px;
+    max-height: 140px;
     overflow: hidden;
 
     transition: max-height 0.4s ease-in;
@@ -101,6 +113,7 @@ body {
 .website-info {
     display: flex;
     align-items: center;
+    flex-direction: column;
 
     p {
         margin: 0;
@@ -333,17 +346,26 @@ input:checked ~ .checkbox-text {
     text-decoration: line-through;
 }
 
+
+
 @media (min-width: 427px) {
     
-.website-info {
-    p {
-        font-size: 1rem;
+    .website-info {
+        p {
+            font-size: 1rem;
+        }
+
+        span {
+            font-size: 1.2rem;
+        }
     }
 
-    span {
-        font-size: 1.2rem;
+    .website-card {
+        max-height: 170px;
     }
-}
+
+    
+
 
 }
 
@@ -358,6 +380,24 @@ input:checked ~ .checkbox-text {
 
     span.status {
         padding: 5px 30px;
+    }
+
+    .website-info {
+        flex-direction: row;
+    }
+
+    .search input {
+        width: auto;
+        margin-bottom: 0px;
+        margin: 0 15px;
+    }
+
+
+
+
+    .search .container {
+        flex-direction: row;
+        justify-content: flex-start;
     }
 }
 
